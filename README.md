@@ -12,27 +12,43 @@ We are required to <mark>model the demand for shared bikes with the available in
 
 
 ## Table of Contents
-* [General Info](#general-information)
+
 * [Technologies Used](#technologies-used)
 * [Conclusions](#conclusions)
-* [Acknowledgements](#acknowledgements)
+
 
 <!-- You can include any other section that is pertinent to your problem -->
 
-## General Information
-- Provide general information about your project here.
-- What is the background of your project?
-- What is the business probem that your project is trying to solve?
-- What is the dataset that is being used?
 
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 ## Conclusions
-- Conclusion 1 from the analysis
-- Conclusion 2 from the analysis
-- Conclusion 3 from the analysis
-- Conclusion 4 from the analysis
+We have built a Linear Regression model to predict the demand of shared bikes in the American Market. The linear equation for the same is given by :__
 
+<span style="color:'red">$ cnt = 0.2041 + 0.2556  \times  yr\_2019 - 0.1028  \times  holiday + 0.4736 \times temp - 0.1359 \times spring + 0.1060 \times winter - 0.0626 \times December - 0.0898 \times July - 0.0926 \times November - 0.3178 \times Light\_Snow-Rain - 0.0857 \times Mist\_Cloudy$</span>
+
+Here,<br>
+`cnt` is the demand of shared bikes on a particular day i.e. our target variable.
+
+We can see in the above equation : 
+1. __yr_2019__ is positively affecting demands i.e. Demands in 2019 has grown as compared to 2018.
+2. __holiday__ is negatively impacting demands i.e. on holidays demands will be relatively less.
+3. __temp__ is positively impacting demands i.e. increase in temperature, increases the demand.
+4. __spring__ is negatively impacting demands i.e. during spring season demand is decreasing.
+5. __winter__ is positively impacting demands i.e. during winter season demand is expected to be higher.
+6. __December, July and November__ are negatively impacting demands i.e. during these months demand is lower.
+7. __Light_Snow-Rain and Mist_Cloudy__ type weather is negatively impacting demands i.e. during snowy, rainy and misty weather demand is expected to decrease.
+
+Out of all these features, <mark>__temp (temperature)__ is the most important factor affecting the demands of shared bikes in the American Market.</mark>
+
+- We can see, that __Winter__ is positively affecting demands whereas the months of __November, December and January__ are negatively affecting the demands. This is due to the fact that USA has around 50 states and that's why __Winter__ can be during the months other December-January.
+- __Temperature__ is positively affecting the demands because in USA , during winters it's mostly holiday and during summers it's not the case which is why demand is more.
+- During __Light Snowy or Rainy__ weather cars are usually preferred as people would not like to go unprotected.
+- During __holidays__, demand for shared bikes is low as people will stay at home during these days.
+
+## :: Linear Regression Model's Peformance ::
+__R_Squared:__`0.836`<br>
+__Adj. R_Squared:__`0.832`<br>
+__Model's R2_Score:__`0.813`
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 
@@ -44,13 +60,6 @@ We are required to <mark>model the demand for shared bikes with the available in
 - seaborn - version 0.12.2
 
 <!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
-
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- References if any...
-- This project was based on [this tutorial](https://www.example.com).
-
 
 ## Contact
 Created by [@https://github.com/Anirudh1710/] - feel free to contact me!
