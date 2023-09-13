@@ -42,7 +42,7 @@ Give credit here.
 
 
 ## Contact
-Created by [@githubusername] - feel free to contact me!
+Created by [@https://github.com/Anirudh1710/] - feel free to contact me!
 
 
 <!-- Optional -->
